@@ -17,4 +17,10 @@ describe('reverseArray', () => {
     let result = reverseArray(arrayInput);
     expect(result).toEqual([1, 2]);
   })
+
+  it('tests that the [1, 4, 5, 2] array inverses to [2, 5, 4, 1]', () => {
+    let arrayInput = [1, 4, 5, 2];
+    let result = reverseArray(arrayInput);
+    expect(result).toEqual([2, 5, 4, 1]);
+  })
 })
