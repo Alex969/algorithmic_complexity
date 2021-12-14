@@ -1,8 +1,3 @@
-// input     |     output
-// [1,2]     |  [2,1]
-// [1,2,3]   |  [3,2,1]
-// []        |  error 'cannot reverse empty array'
-
 const reverseArray = require('../reverseArray');
 
 describe('reverseArray', () => {
@@ -22,5 +17,12 @@ describe('reverseArray', () => {
     let arrayInput = [1, 4, 5, 2];
     let result = reverseArray(arrayInput);
     expect(result).toEqual([2, 5, 4, 1]);
+  })
+
+  it('tests that you can\'t reverse an empty array', () => {
+    let arrayInput = [];
+    expect(() => {
+      reverseArray(arrayInput)
+    }).toThrowError('cannot reverse empty array');
   })
 })

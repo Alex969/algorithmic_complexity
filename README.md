@@ -22,15 +22,24 @@ input     |     output
 
 2. Think about how you would do this, given this task in real life.
 3. Write down each step in plain English
-
-we would take an input array 
-check for the first element and make it last 
-check for the second element and make it second to last
-check for the i element and make it i to last 
-check for the last element and make it first
-return the array 
- 
 4. If it is possible directly:
   * translate each of the steps into code otherwise:
   * think about each step separately, and break them down further following     steps 2 to 4.
+
+// check for the first element and make it last 
+// making the first element last means that [0] becomes [array.length - 1]
+// and [array.length - 1] becomes [0]
+// [array.length - 2]  becomes [1]
+// [array.length - (i + 1)] becomes [i]
+// we can just push them in a new array and return that array 
+// check for the second element and make it second to last
+// [1] becomes [array.length - 2]
+// [i] becomes [array.length - (i+1)]
+// 
+// for(i = 0; i < array1.legnth; i++)
+// array2.push(array[array.length - (i+1)])
+// return array2
+// check for the i element and make it i to last 
+// check for the last element and make it first
+
 5. Once everything is translated to code, run your test cases
